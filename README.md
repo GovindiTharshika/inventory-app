@@ -56,4 +56,4 @@ assertEquals(250.0, service.calculateStockValue(...));
 to an incorrect expected value such as `100.0`. Commit and push to observe a failed workflow. Restore `250.0`, commit, and push again to demonstrate recovery.
 
 ## Suggested repository name
-`EAD-DevOps-Lab`
+`EAD-DevOps-Lab-inventory-app`
