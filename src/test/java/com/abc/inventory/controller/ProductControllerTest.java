@@ -1,6 +1,7 @@
 package com.abc.inventory.controller;
 
 import com.abc.inventory.model.Product;
+import com.abc.inventory.repository.ProductRepository;
 import com.abc.inventory.service.ProductService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class ProductControllerTest {
     @Autowired MockMvc mvc;
     @MockBean ProductService service;
+    @MockBean ProductRepository repository;
     @Test void returnsProducts() throws Exception {
         when(service.findAll()).thenReturn(List.of(new Product(1L,"Laptop","Electronics",5,1000.0)));
         mvc.perform(get("/api/products")).andExpect(status().isOk()).andExpect(jsonPath("$[0].name").value("Laptop"));

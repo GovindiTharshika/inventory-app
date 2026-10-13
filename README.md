@@ -32,9 +32,9 @@ Open `http://localhost:8080`.
 ```bash
 mvn clean package
 docker build -t inventory-app .
-docker run --rm -p 8080:8080 inventory-app
+docker run --rm -p 8081:8080 inventory-app
 ```
-Open `http://localhost:8080`.
+Open `http://localhost:8081`.
 
 ## API
 - `GET /api/products`
